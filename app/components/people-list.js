@@ -1,8 +1,9 @@
-import { component } from '@ember/component';
+import Component from '@glimmer/component';
 import { action } from '@ember/object';
 
-export default class PeopleListComponent extends component {
-  @action showPerson = (person) => {
-    return alert(`You clicked on ${person}`);
-  };
+export default class PeopleListComponent extends Component {
+  @action
+  showPerson(person) {
+    alert(`The person's name is ${person}!`);
+  }
 }
